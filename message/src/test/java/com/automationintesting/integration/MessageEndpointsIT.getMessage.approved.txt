@@ -1,0 +1,8 @@
+{
+    "messageid": 1,
+    "name": "James Dean",
+    "email": "james@email.com",
+    "phone": "01402 619211",
+    "subject": "Booking enquiry",
+    "description": "I would like to book a room at your place"
+}
