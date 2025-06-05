@@ -1,5 +1,10 @@
 name: Message Service Build
 
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+
 on:
   push:
     paths:
