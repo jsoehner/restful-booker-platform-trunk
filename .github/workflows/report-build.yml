@@ -1,5 +1,9 @@
 name: Report Service Build
 
+permissions:
+  contents: read
+  packages: write
+
 on:
   push:
     paths:
