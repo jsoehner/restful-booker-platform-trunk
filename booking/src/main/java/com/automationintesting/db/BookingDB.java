@@ -186,9 +186,10 @@ public class BookingDB {
 
     public List<BookingSummary> queryBookingSummariesById(String roomid) throws SQLException {
         List<BookingSummary> listToReturn = new ArrayList<BookingSummary>();
-        String sql = "SELECT * FROM BOOKINGS WHERE roomid = " + roomid;
-
-        ResultSet results = connection.prepareStatement(sql).executeQuery();
+        String sql = "SELECT * FROM BOOKINGS WHERE roomid = ?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, roomid);
+        ResultSet results = ps.executeQuery();
         while(results.next()){
             listToReturn.add(new BookingSummary(results));
         }
