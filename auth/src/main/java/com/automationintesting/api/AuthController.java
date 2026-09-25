@@ -5,14 +5,15 @@ import com.automationintesting.model.Decision;
 import com.automationintesting.model.Token;
 import com.automationintesting.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 
@@ -27,12 +28,17 @@ public class AuthController {
         Decision decision = authService.queryCredentials(auth);
 
         if(decision.getStatus() == HttpStatus.OK){
-            Cookie cookie = new Cookie("token", decision.getToken().getToken());
-            cookie.setPath("/");
+            ResponseCookie cookie = ResponseCookie.from("token", decision.getToken().getToken())
+                    .path("/")
+                    .httpOnly(true)
+                    .secure(true)
+                    .build();
 
-            response.addCookie(cookie);
+            response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
 
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok()
+                    .header(HttpHeaders.SET_COOKIE, cookie.toString())
+                    .build();
         } else {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
         }

@@ -9,6 +9,9 @@ on:
     branches:
       - trunk
 
+permissions:
+  contents: read
+
 jobs:
   e2e:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
