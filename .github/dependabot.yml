@@ -14,6 +14,9 @@ updates:
   open-pull-requests-limit: 1
   assignees:
   - jsoehner
+  ignore:
+  - dependency-name: "io.rest-assured:rest-assured"
+    update-types: ["version-update:semver-major"]
 - package-ecosystem: docker
   directory: /
   schedule:

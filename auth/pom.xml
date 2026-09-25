@@ -104,7 +104,7 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>6.0.0</version>
+            <version>5.5.5</version>
             <exclusions>
                 <!-- Exclude Groovy because of dependency issue -->
                 <exclusion>
