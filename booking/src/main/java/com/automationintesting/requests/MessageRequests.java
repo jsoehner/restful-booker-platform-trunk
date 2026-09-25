@@ -2,6 +2,7 @@ package com.automationintesting.requests;
 
 import com.automationintesting.model.db.Message;
 import org.springframework.http.*;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
@@ -20,7 +21,7 @@ public class MessageRequests {
     }
 
     public boolean postMessage(Message message){
-        RestTemplate restTemplate = new RestTemplate();
+        RestTemplate restTemplate = new RestTemplate(new SimpleClientHttpRequestFactory());
 
         HttpHeaders requestHeaders = new HttpHeaders();
         requestHeaders.setContentType(MediaType.APPLICATION_JSON);
