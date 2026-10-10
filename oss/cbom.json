@@ -1,0 +1,37 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:auto-generated-cbom",
+  "version": 1,
+  "components": [
+    {
+      "type": "cryptographic-asset",
+      "name": "SHA-384",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "name": "SHA-384",
+          "primitive": "hash",
+          "parameterSetIdentifier": "384",
+          "executionEnvironment": "software-plain-ram"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "assets/src/app/layout.tsx:24",
+            "snippet": "<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-"
+          },
+          {
+            "location": "assets/src/app/layout.tsx:40",
+            "snippet": "integrity=\"sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut\""
+          },
+          {
+            "location": "assets/src/app/layout.tsx:48",
+            "snippet": "integrity=\"sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq\""
+          }
+        ]
+      }
+    }
+  ]
+}
