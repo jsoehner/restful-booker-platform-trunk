@@ -40,3 +40,7 @@ The user login details are:
 ### API details
 
 The details on running checks, building APIs and additional details on documentation for development can be found in READMEs inside each of the API folders.
+
+
+## 🛡️ Security & Cryptographic Posture
+This project tracks Software & Cryptographic Bill of Materials (SBOM & CBOM) and Post-Quantum Cryptography (PQC) readiness. See the latest [Cryptographic Audit & PQC Migration Report](docs/security/CRYPTOGRAPHIC_AUDIT.md).
