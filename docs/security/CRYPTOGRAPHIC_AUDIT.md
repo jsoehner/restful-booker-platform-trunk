@@ -16,8 +16,8 @@
 | Evaluation Layer | Coverage / Status | Audit Confidence Assessment |
 |---|---|---|
 | **First-Party Code (`src/`)** | **100% Audited** (0 Custom Primitives) | 🟢 **HIGH** (Direct AST & SAST verified clean) |
-| **Third-Party Supply Chain** | **3.0%** (7 of 230 dependencies cataloged) | 🔴 LOW (Known profiles assimilated) |
-| **Overall Audit Confidence Score** | **3.5%** | **🔴 LOW** (223 unassimilated supply chain dependencies) |
+| **Third-Party Supply Chain** | **2.6%** (6 of 229 dependencies cataloged) | 🔴 LOW (Known profiles assimilated) |
+| **Overall Audit Confidence Score** | **3.0%** | **🔴 LOW** (223 unassimilated supply chain dependencies) |
 
 ### ✅ Post-Quantum Cryptography Migrated Assets
 
