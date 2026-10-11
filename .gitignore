@@ -26,3 +26,6 @@ ui/public/js
 
 # ApprovalTests
 **/.approval_tests_temp/
+
+# SBOM / CBOM artifacts
+oss/
