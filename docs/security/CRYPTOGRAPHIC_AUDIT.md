@@ -16,8 +16,8 @@
 | Evaluation Layer | Coverage / Status | Audit Confidence Assessment |
 |---|---|---|
 | **First-Party Code (`src/`)** | **100% Audited** (0 Custom Primitives) | 🟢 **HIGH** (Direct AST & SAST verified clean) |
-| **Third-Party Supply Chain** | **2.6%** (6 of 229 dependencies cataloged) | 🔴 LOW (Known profiles assimilated) |
-| **Overall Audit Confidence Score** | **3.0%** | 🔴 LOW (223 unassimilated supply chain dependencies) |
+| **Third-Party Supply Chain** | **2.6%** (6 of 230 dependencies cataloged) | 🔴 LOW (Known profiles assimilated) |
+| **Overall Audit Confidence Score** | **3.0%** | 🔴 LOW (224 unassimilated supply chain dependencies) |
 
 | **System OS Inventory** | **Pending Update** | 🟡 **Warning** (Local OS crypto components not yet inventoried) |
 
@@ -61,4 +61,4 @@
 | `@img/sharp-libvips-linux-arm` | 1.3.4 | `pkg:npm/%40img/sharp-libvips-linux-arm@1.3.4` | 🟡 Unassimilated (No upstream CBOM) |
 | `@img/sharp-libvips-linux-arm64` | 1.3.4 | `pkg:npm/%40img/sharp-libvips-linux-arm64@1.3.4` | 🟡 Unassimilated (No upstream CBOM) |
 | `@img/sharp-libvips-linux-ppc64` | 1.3.4 | `pkg:npm/%40img/sharp-libvips-linux-ppc64@1.3.4` | 🟡 Unassimilated (No upstream CBOM) |
-| *... and 208 more unassimilated dependencies* | | | |
+| *... and 209 more unassimilated dependencies* | | | |
