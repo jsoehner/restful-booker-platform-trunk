@@ -16,8 +16,8 @@
 | Evaluation Layer | Coverage / Status | Audit Confidence Assessment |
 |---|---|---|
 | **First-Party Code (`src/`, `scripts/`)** | **100% Audited** (1 Crypto Primitive(s) Inventoried across TypeScript (3)) | 🟢 **HIGH** (Direct AST & SAST verified) |
-| **Third-Party Supply Chain** | **44.0%** (91 of 207 dependencies cataloged) | 🔴 LOW (Known profiles assimilated) |
-| **Overall Audit Confidence Score** | **44.2%** | 🔴 LOW (116 unassimilated supply chain dependencies) |
+| **Third-Party Supply Chain** | **43.7%** (90 of 206 dependencies cataloged) | 🔴 LOW (Known profiles assimilated) |
+| **Overall Audit Confidence Score** | **44.0%** | 🔴 LOW (116 unassimilated supply chain dependencies) |
 
 | **System OS Inventory** | **Pending Update** | 🟡 **Warning** (Local OS crypto components not yet inventoried) |
 
