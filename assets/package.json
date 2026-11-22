@@ -59,7 +59,7 @@
     "node-sass": "9.0.0",
     "pigeon-maps": "0.22.1",
     "pigeon-marker": "0.3.4",
-    "query-string": "9.1.1",
+    "query-string": "9.5.1",
     "react": "19.1.0",
     "react-big-calendar": "1.18.0",
     "react-datepicker": "8.3.0",
