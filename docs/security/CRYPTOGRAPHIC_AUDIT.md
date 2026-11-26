@@ -1,21 +1,21 @@
 ## 🛡️ Cryptographic Bill of Materials (CBOM) & PQC Migration Assessment
 
-**Format**: CycloneDX (v1.6) | **First-Party Code Crypto Assets**: 1 | **Total Tracked Crypto Assets**: 6
+**Format**: CycloneDX (v1.6) | **First-Party Code Crypto Assets**: 2 | **Total Tracked Crypto Assets**: 7
 
 ### 📊 Post-Quantum Migration Scorecard
 
 | Metric | Count | Migration Status |
 |---|---|---|
 | **Post-Quantum Ready (PQC)** | **0** | 🟢 Quantum-Resistant (NIST FIPS 203/204/205) |
-| **Quantum-Vulnerable (Backlog)** | **2** | 🔴 At Risk of 'Harvest Now, Decrypt Later' |
+| **Quantum-Vulnerable (Backlog)** | **3** | 🔴 At Risk of 'Harvest Now, Decrypt Later' |
 | **Classical Symmetric / Digest** | **4** | 🟡 Classical Security (Requires AES-256 / SHA-256+) |
-| **Asymmetric PQC Migration Progress** | **0.0%** | (0 of 2 asymmetric/vulnerable primitives migrated) |
+| **Asymmetric PQC Migration Progress** | **0.0%** | (0 of 3 asymmetric/vulnerable primitives migrated) |
 
 ### 🎯 Cryptographic Supply Chain Coverage & Confidence
 
 | Evaluation Layer | Coverage / Status | Audit Confidence Assessment |
 |---|---|---|
-| **First-Party Code (`src/`, `scripts/`)** | **100% Audited** (1 Crypto Primitive(s) Inventoried across TypeScript (3)) | 🟢 **HIGH** (Direct AST & SAST verified) |
+| **First-Party Code (`src/`, `scripts/`)** | **100% Audited** (2 Crypto Primitive(s) Inventoried across Configuration (3), TypeScript (3)) | 🟢 **HIGH** (Direct AST & SAST verified) |
 | **Third-Party Supply Chain** | **43.7%** (90 of 206 dependencies cataloged) | 🔴 LOW (Known profiles assimilated) |
 | **Overall Audit Confidence Score** | **44.0%** | 🔴 LOW (116 unassimilated supply chain dependencies) |
 
@@ -29,6 +29,7 @@
 
 | Component / Algorithm | Type / Primitive | Key Length / Curve | Recommended Target | Provenance / Context |
 |---|---|---|---|---|
+| **`RSA-2048`**<br><sub>RSA-2048</sub> | algorithm / signature | 2048 | **ML-KEM-768 / Kyber (FIPS 203)** | First-Party Code (SAST/AST)<br>`assets/package-lock.json:4793`<br><sub><code>"@peculiar/asn1-rsa": "^2.11.1",</code></sub><br><br>`assets/package-lock.json:4838`<br><sub><code>"node_modules/@peculiar/asn1-rsa": {</code></sub><br><br>`assets/package-lock.json:4922`<br><sub><code>"@peculiar/asn1-rsa": "^2.6.0",</code></sub> |
 | **`spring-web (Spring WebClient / RestTemplate HTTPS)`**<br><sub>HTTPS / TLS 1.3</sub> | protocol / protocol | ECDH-X25519 / RSA-2048 | **Ensure target endpoints and JVM client support hybrid post-quantum key encapsulation (ML-KEM-768)** | Assimilated Upstream CBOM: Spring Framework HTTP Client Security Specification<br>`Dependency: spring-web@4.3.13.RELEASE` |
 | **`tomcat-embed-core (Tomcat TLS Transport Engine)`**<br><sub>TLS 1.2 / TLS 1.3</sub> | protocol / protocol | RSA-2048 / ECDSA-P256 | **Upgrade to Post-Quantum hybrid key exchange (X25519+ML-KEM-768) via OpenSSL 3.5+ or Java 25 JSSE provider** | Assimilated Upstream CBOM: Apache Tomcat Security Advisory & JSSE Specification<br>`Dependency: tomcat-embed-core@8.5.23` |
 
