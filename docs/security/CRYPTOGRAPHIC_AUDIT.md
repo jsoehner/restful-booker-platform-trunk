@@ -29,7 +29,7 @@
 
 | Component / Algorithm | Type / Primitive | Key Length / Curve | Recommended Target | Provenance / Context |
 |---|---|---|---|---|
-| **`RSA-2048`**<br><sub>RSA-2048</sub> | algorithm / signature | 2048 | **ML-KEM-768 / Kyber (FIPS 203)** | First-Party Code (SAST/AST)<br>`assets/package-lock.json:4793`<br><sub><code>"@peculiar/asn1-rsa": "^2.11.1",</code></sub><br><br>`assets/package-lock.json:4838`<br><sub><code>"node_modules/@peculiar/asn1-rsa": {</code></sub><br><br>`assets/package-lock.json:4922`<br><sub><code>"@peculiar/asn1-rsa": "^2.6.0",</code></sub> |
+| **`RSA-2048`**<br><sub>RSA-2048</sub> | algorithm / signature | 2048 | **ML-KEM-768 / Kyber (FIPS 203)** | First-Party Code (SAST/AST)<br>`assets/package-lock.json:4779`<br><sub><code>"@peculiar/asn1-rsa": "^2.11.1",</code></sub><br><br>`assets/package-lock.json:4824`<br><sub><code>"node_modules/@peculiar/asn1-rsa": {</code></sub><br><br>`assets/package-lock.json:4908`<br><sub><code>"@peculiar/asn1-rsa": "^2.6.0",</code></sub> |
 | **`spring-web (Spring WebClient / RestTemplate HTTPS)`**<br><sub>HTTPS / TLS 1.3</sub> | protocol / protocol | ECDH-X25519 / RSA-2048 | **Ensure target endpoints and JVM client support hybrid post-quantum key encapsulation (ML-KEM-768)** | Assimilated Upstream CBOM: Spring Framework HTTP Client Security Specification<br>`Dependency: spring-web@4.3.13.RELEASE` |
 | **`tomcat-embed-core (Tomcat TLS Transport Engine)`**<br><sub>TLS 1.2 / TLS 1.3</sub> | protocol / protocol | RSA-2048 / ECDSA-P256 | **Upgrade to Post-Quantum hybrid key exchange (X25519+ML-KEM-768) via OpenSSL 3.5+ or Java 25 JSSE provider** | Assimilated Upstream CBOM: Apache Tomcat Security Advisory & JSSE Specification<br>`Dependency: tomcat-embed-core@8.5.23` |
 
